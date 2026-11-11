@@ -1,0 +1,10 @@
+<div class="contenedor">
+  <h1>Semáforo</h1>
+
+
+  <button (click)="hacerRojo()">Rojo</button>
+  <button (click)="hacerAmarillo()">Amarillo</button>
+  <button (click)="hacerVerde()">Verde</button>
+  <div class="circulo" [style.backgroundColor]="color"></div>
+  <h2>{{ mensaje }}</h2>
+</div>

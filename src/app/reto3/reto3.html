@@ -1,0 +1,18 @@
+<div class="contenedor">
+  <h1>Registro de Estudiantes</h1>
+
+  <div class="formulario">
+    <input type="text" [(ngModel)]="nombre" placeholder="Nombre">
+    <input type="text" [(ngModel)]="programa" placeholder="Programa">
+    <input type="number" [(ngModel)]="edad" placeholder="Edad">
+    
+    <button (click)="registrar()">Registrar</button>
+  </div>
+
+  <h2>Lista</h2>
+  <ul>
+    @for (est of estudiantes; track est.nombre) {
+      <li>{{ est.nombre }} - {{ est.programa }} ({{ est.edad }} años)</li>
+    }
+  </ul>
+</div>

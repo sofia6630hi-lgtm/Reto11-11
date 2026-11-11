@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { reto1 } from './reto1/reto1';
+import { reto2 } from './reto2/reto2';
+import { reto3 } from './reto3/reto3';
+import { reto4 } from './reto4/reto4';
+import { reto5 } from './reto5/reto5';
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [CommonModule, reto1, reto2, reto3, reto4, reto5],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Reto11-11');
+  title = 'Reto11-11';
 }

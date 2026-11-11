@@ -1,0 +1,15 @@
+.contenedor {
+  max-width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+input, button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}

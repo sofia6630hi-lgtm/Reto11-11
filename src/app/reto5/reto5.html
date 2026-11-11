@@ -1,0 +1,22 @@
+<div class="contenedor">
+  <h2>Control de Inventario</h2>
+
+  <div class="formulario">
+    <label>Nombre del producto:</label>
+    <input [(ngModel)]="nombre" placeholder="">
+    <label>Cantidad:</label>
+    <input [(ngModel)]="cantidad" type="number" placeholder="">
+    <label>Precio unitario:</label>
+    <input [(ngModel)]="precio" type="number" placeholder="">
+    <button (click)="agregar()">Agregar</button>
+  </div>
+
+  <ul>
+    @for (p of inventario; track p.nombre; let i = $index) {
+      <li>
+        <span><strong>{{ p.nombre }}</strong> ({{ p.cantidad }} x ${{ p.precio }}) = <b>${{ p.total }}</b></span>
+        <button class="btn-eliminar" (click)="eliminar(i)">X</button>
+      </li>
+    }
+  </ul>
+</div>
